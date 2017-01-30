@@ -1,0 +1,44 @@
+# Template information section
+name: "viper"
+summary: "Swift VIPER module template with UIViewController playing as a View."
+author: "Angel Cortez"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+# View layer
+- {name: View/ViewController.swift, path: Code/View/View.swift.liquid}
+
+# Presenter layer
+- {name: Presenter/Presenter.swift, path: Code/Presenter/Presenter.swift.liquid}
+
+# Interactor layer
+- {name: Interactor/Interactor.swift, path: Code/Interactor/Interactor.swift.liquid}
+- {name: Interactor/Item.swift, path: Code/Interactor/Item.swift.liquid}
+
+# WireFrame layer
+- {name: Wireframe/Wireframe.swift, path: Code/WireFrame/WireFrame.swift.liquid}
+
+# Protocols
+- {name: Protocols/Protocols.swift, path: Code/Protocols/Protocols.swift.liquid}
+
+# DataManager
+- {name: DataManager/API/APIDataManager.swift, path: Code/DataManager/API/APIDataManager.swift.liquid}
+- {name: DataManager/Local/LocalDataManager.swift, path: Code/DataManager/Local/LocalDataManager.swift.liquid}
+
+# The declarations for test files
+test_files:
+
+# View tests
+- {name: View/ViewTests.swift, path: Tests/View/view_tests.swift.liquid}
+
+# Interactor tests
+- {name: Interactor/InteractorTests.swift, path: Tests/Interactor/interactor_tests.swift.liquid}
+
+# Presenter tests
+- {name: Presenter/PresenterTests.swift, path: Tests/Presenter/presenter_tests.swift.liquid}
+
+# Wireframe tests
+- {name: WireFrame/WireframeTests.swift, path: Tests/Wireframe/wireframe_tests.swift.liquid}

@@ -1,0 +1,75 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+protocol {{ module_info.name }}ViewProtocol: class
+{
+    var presenter: {{ module_info.name }}PresenterProtocol? { get set }
+    /**
+    * Add here are the methods for communication PRESENTER -> VIEW
+    */
+}
+
+protocol {{ module_info.name }}WireFrameProtocol: class
+{
+    static func present{{ module_info.name }}Module(fromView view: {{ module_info.name }}ViewProtocol)
+    /**
+    * Add here are the methods for communication PRESENTER -> WIREFRAME
+    */
+}
+
+protocol {{ module_info.name }}PresenterProtocol: class
+{
+    var view: {{ module_info.name }}ViewProtocol? { get set }
+    var interactor: {{ module_info.name }}InteractorInputProtocol? { get set }
+    var wireframe: {{ module_info.name }}WireFrameProtocol? { get set }
+    /**
+    * Add here are the methods for communication VIEW -> PRESENTER
+    */
+}
+
+protocol {{ module_info.name }}InteractorOutputProtocol: class
+{
+    /**
+    * Add here are the methods for communication INTERACTOR -> PRESENTER
+    */
+}
+
+protocol {{ module_info.name }}InteractorInputProtocol: class
+{
+    var presenter: {{ module_info.name }}InteractorOutputProtocol? { get set }
+    var APIDataManager: {{ module_info.name }}APIDataManagerInputProtocol? { get set }
+    var localDataManager: {{ module_info.name }}LocalDataManagerInputProtocol? { get set }
+
+    /**
+    * Add here the methods for communications PRESENTER -> INTERACTOR
+    */
+}
+
+protocol {{ module_info.name  }}DataManagerInputProtocol: class
+{
+    /**
+    * Add here the methods for communication INTERACTOR -> DATAMANAGER
+    */
+}
+
+protocol {{ module_info.name }}APIDataManagerInputProtocol: class
+{
+    /**
+    * Add here the methods for communication INTERACTOR -> APIDATAMANAGER
+    */
+}
+
+protocol {{ module_info.name }}LocalDataManagerInputProtocol: class
+{
+    /**
+    * Add here the methods for communication INTERACTOR -> LOCALDATAMANAGER
+    */
+}
+

@@ -1,0 +1,35 @@
+### Headers settings
+company: Swhile, Inc.
+
+### Xcode project settings
+project_name: Swhile
+xcodeproj_path: Swhile.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: Swhile
+
+# The file path for new modules
+project_file_path: /
+
+# The Xcode group path to new modules
+project_group_path: /
+
+### Tests generation settings section
+# The tests target name
+test_target: SwhileUITests
+
+# The file path for new tests
+test_file_path: /
+
+# The Xcode group path to new tests
+test_group_path: Test
+
+### Dependencies settings section
+podfile_path: Podfile
+cartfile_path: Cartfile
+
+### Templates
+templates:
+
+- {name: viper}

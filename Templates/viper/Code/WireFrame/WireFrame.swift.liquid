@@ -1,0 +1,32 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Foundation
+
+class {{ module_info.name }}WireFrame: {{ module_info.name }}WireFrameProtocol
+{
+    class func present{{ module_info.name }}Module(fromView view: {{ module_info.name }}ViewProtocol)
+    {
+        // Generating module components
+        let view: {{ module_info.name }}ViewProtocol = view
+        let presenter: {{ module_info.name }}PresenterProtocol & {{ module_info.name }}InteractorOutputProtocol = {{ module_info.name }}Presenter()
+        let interactor: {{ module_info.name }}InteractorInputProtocol = {{ module_info.name }}Interactor()
+        let APIDataManager: {{ module_info.name }}APIDataManagerInputProtocol = {{ module_info.name }}APIDataManager()
+        let localDataManager: {{ module_info.name }}LocalDataManagerInputProtocol = {{ module_info.name }}LocalDataManager()
+        let wireframe: {{ module_info.name }}WireFrameProtocol = {{ module_info.name }}WireFrame()
+
+        // Connecting
+        view.presenter = presenter
+        presenter.view =  view
+        presenter.wireframe = wireframe
+        presenter.interactor = interactor
+        interactor.presenter = presenter
+        interactor.APIDataManager = APIDataManager
+        interactor.localDataManager = localDataManager
+    }
+}
