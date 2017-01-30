@@ -17,6 +17,8 @@
 		28B66E0F1E3FEBFA006C44DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28B66E0D1E3FEBFA006C44DB /* LaunchScreen.storyboard */; };
 		28B66E1A1E3FEBFB006C44DB /* SwhileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B66E191E3FEBFB006C44DB /* SwhileTests.swift */; };
 		28B66E251E3FEBFB006C44DB /* SwhileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B66E241E3FEBFB006C44DB /* SwhileUITests.swift */; };
+		28B66E351E3FF17C006C44DB /* Rambafile in Resources */ = {isa = PBXBuildFile; fileRef = 28B66E331E3FF17C006C44DB /* Rambafile */; };
+		28B66E361E3FF17C006C44DB /* Templates in Resources */ = {isa = PBXBuildFile; fileRef = 28B66E341E3FF17C006C44DB /* Templates */; };
 		2F56F351D3112DA6C4208C64 /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96A6AE68B9892352A2776E4 /* HomeInteractorTests.swift */; };
 		37D49691EA2D9AEA9A0436CC /* HomeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28A20B4854F98D34933A55B /* HomeViewTests.swift */; };
 		4A920280213E4AA1529FDB5A /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B0D45F54CAC203DB3B2265 /* HomeProtocols.swift */; };
@@ -59,6 +61,8 @@
 		28B66E201E3FEBFB006C44DB /* SwhileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwhileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B66E241E3FEBFB006C44DB /* SwhileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwhileUITests.swift; sourceTree = "<group>"; };
 		28B66E261E3FEBFB006C44DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28B66E331E3FF17C006C44DB /* Rambafile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rambafile; sourceTree = "<group>"; };
+		28B66E341E3FF17C006C44DB /* Templates */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Templates; sourceTree = "<group>"; };
 		2EB2EB5529D5BD003489F81D /* HomePresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
 		3E2170F407B82288BDA70047 /* HomeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4B14588B48277216E05D948C /* HomeAPIDataManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HomeAPIDataManager.swift; sourceTree = "<group>"; };
@@ -106,7 +110,6 @@
 				6E1B7CA0333EEF5B1B23282D /* Presenter */,
 				58924BFE4EA641059830C762 /* WireFrame */,
 			);
-			name = Home;
 			path = Home;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -115,7 +118,6 @@
 			children = (
 				B4B0D45F54CAC203DB3B2265 /* HomeProtocols.swift */,
 			);
-			name = Protocols;
 			path = Protocols;
 			sourceTree = "<group>";
 		};
@@ -128,6 +130,7 @@
 				28B66E021E3FEBFA006C44DB /* Products */,
 				2C0E677EE02BF3EA47E81526 /* Home */,
 				E6D0F37D278A31586D3D7EED /* Test */,
+				28B66E321E3FF167006C44DB /* Ramba */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,6 +175,15 @@
 			path = SwhileUITests;
 			sourceTree = "<group>";
 		};
+		28B66E321E3FF167006C44DB /* Ramba */ = {
+			isa = PBXGroup;
+			children = (
+				28B66E331E3FF17C006C44DB /* Rambafile */,
+				28B66E341E3FF17C006C44DB /* Templates */,
+			);
+			name = Ramba;
+			sourceTree = "<group>";
+		};
 		2C0E677EE02BF3EA47E81526 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,7 +194,6 @@
 				28052F3CD527AB3303A286F1 /* Protocols */,
 				7A002AA1A5E87C5219CC8C66 /* DataManager */,
 			);
-			name = Home;
 			path = Home;
 			sourceTree = "<group>";
 		};
@@ -191,7 +202,6 @@
 			children = (
 				9E7F42366E1200C81A4162E9 /* HomeWireframe.swift */,
 			);
-			name = Wireframe;
 			path = Wireframe;
 			sourceTree = "<group>";
 		};
@@ -200,7 +210,6 @@
 			children = (
 				81B81A65AE30F99911778ABE /* HomeWireframeTests.swift */,
 			);
-			name = WireFrame;
 			path = WireFrame;
 			sourceTree = "<group>";
 		};
@@ -209,7 +218,6 @@
 			children = (
 				9E2F4983AA3A6E09CB80BD4F /* HomePresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -218,7 +226,6 @@
 			children = (
 				2EB2EB5529D5BD003489F81D /* HomePresenterTests.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -228,7 +235,6 @@
 				F685F1F68C2E3B09356A2478 /* API */,
 				F10DFF184ECC187741B3168C /* Local */,
 			);
-			name = DataManager;
 			path = DataManager;
 			sourceTree = "<group>";
 		};
@@ -237,7 +243,6 @@
 			children = (
 				3E2170F407B82288BDA70047 /* HomeViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -246,7 +251,6 @@
 			children = (
 				E96A6AE68B9892352A2776E4 /* HomeInteractorTests.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -256,7 +260,6 @@
 				C46EF90A3AD4CA99BEC85709 /* HomeInteractor.swift */,
 				529D01FAF0E267F03ABCC3B4 /* HomeItem.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -265,7 +268,6 @@
 			children = (
 				E28A20B4854F98D34933A55B /* HomeViewTests.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -274,7 +276,6 @@
 			children = (
 				0CBA58A47783D82D3007AC59 /* Home */,
 			);
-			name = Test;
 			path = Test;
 			sourceTree = "<group>";
 		};
@@ -283,7 +284,6 @@
 			children = (
 				CAE4C6679B45BC237E7D3CC6 /* HomeLocalDataManager.swift */,
 			);
-			name = Local;
 			path = Local;
 			sourceTree = "<group>";
 		};
@@ -292,7 +292,6 @@
 			children = (
 				4B14588B48277216E05D948C /* HomeAPIDataManager.swift */,
 			);
-			name = API;
 			path = API;
 			sourceTree = "<group>";
 		};
@@ -403,6 +402,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28B66E351E3FF17C006C44DB /* Rambafile in Resources */,
+				28B66E361E3FF17C006C44DB /* Templates in Resources */,
 				28B66E0F1E3FEBFA006C44DB /* LaunchScreen.storyboard in Resources */,
 				28B66E0C1E3FEBFA006C44DB /* Assets.xcassets in Resources */,
 				28B66E0A1E3FEBFA006C44DB /* Main.storyboard in Resources */,
@@ -688,6 +689,7 @@
 				28B66E2B1E3FEBFB006C44DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28B66E2C1E3FEBFB006C44DB /* Build configuration list for PBXNativeTarget "SwhileTests" */ = {
 			isa = XCConfigurationList;
@@ -696,6 +698,7 @@
 				28B66E2E1E3FEBFB006C44DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28B66E2F1E3FEBFB006C44DB /* Build configuration list for PBXNativeTarget "SwhileUITests" */ = {
 			isa = XCConfigurationList;
@@ -704,6 +707,7 @@
 				28B66E311E3FEBFB006C44DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
