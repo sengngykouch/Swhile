@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import FacebookLogin
+import FacebookCore
 
 class HomeView: UIViewController, HomeViewProtocol
 {
@@ -17,9 +17,6 @@ class HomeView: UIViewController, HomeViewProtocol
     
     override func viewDidLoad()
     {
-        let loginButton = LoginButton(readPermissions: [.publicProfile])
-        loginButton.center = view.center
         
-        view.addSubview(loginButton)
     }
 }
