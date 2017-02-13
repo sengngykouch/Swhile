@@ -12,7 +12,7 @@
         <!--Login View-->
         <scene sceneID="lE4-ea-EjA">
             <objects>
-                <viewController id="O15-Fv-UUg" customClass="LoginView" customModule="Swhile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O15-Fv-UUg" customClass="LoginView" customModule="Swhile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KYg-To-aNH"/>
                         <viewControllerLayoutGuide type="bottom" id="ocQ-FX-qat"/>
