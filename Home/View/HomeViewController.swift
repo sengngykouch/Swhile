@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import FacebookCore
+import FBSDKLoginKit
 
 class HomeView: UIViewController, HomeViewProtocol
 {
@@ -17,6 +17,9 @@ class HomeView: UIViewController, HomeViewProtocol
     
     override func viewDidLoad()
     {
-        
+        if (FBSDKAccessToken.current() == nil)
+        {
+            present(LoginView, animated: true, completion: nil)
+        }
     }
 }
