@@ -11,8 +11,7 @@ import Foundation
 import UIKit
 import FacebookLogin
 
-
-class LoginView: UIViewController, LoginViewProtocol
+class LoginView: UIViewController, LoginViewProtocol, LoginButtonDelegate
 {
 
     var presenter: LoginPresenterProtocol?
@@ -21,24 +20,25 @@ class LoginView: UIViewController, LoginViewProtocol
     {
         let loginButton = LoginButton(readPermissions: [.publicProfile])
         loginButton.center = view.center
-        
+        loginButton.delegate = self
         view.addSubview(loginButton)
     }
 
-    // Once the button is clicked, show the login dialog
-    @objc func loginButtonClicked() {
-        let loginManager = LoginManager()
-        loginManager.logIn([ .publicProfile ], viewController: self) { loginResult in
-            switch loginResult {
-            case .failed(let error):
-                print(error)
-            case .cancelled:
-                print("User cancelled login.")
-            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
-                print("Logged in!")
-                self.dismiss(animated: true, completion: nil)
-            }
-        }
+    public func loginButtonDidCompleteLogin(_ loginButton: FacebookLogin.LoginButton, result: FacebookLogin.LoginResult)
+    {
+        print("Login did complete")
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    /**
+     Called when the button was used to logout.
+     
+     - parameter loginButton: Button that was used to logout.
+     */
+    public func loginButtonDidLogOut(_ loginButton: FacebookLogin.LoginButton)
+    {
+        print("Clicked on logout")
+        self.dismiss(animated: true, completion: nil)
     }
 
 }
